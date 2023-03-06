@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('description');
             $table->date('date_debut');
             $table->date('date_fin');
-            $table->timestamps();
+            $table->timestamps(); // une colonne de date de creation et de mise a jour automatique
         });
     }
 

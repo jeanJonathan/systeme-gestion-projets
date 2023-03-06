@@ -15,8 +15,13 @@ return new class extends Migration
     {
         Schema::create('taches', function (Blueprint $table) {
             $table->id();
-
-            $table->timestamps();
+            $table->integer('projet_id');
+            $table->string('nom');
+            $table->string('description');
+            $table->date('date_debut');
+            $table->date('date_fin');
+            $table->string('utilisateur_id');
+            $table->timestamps(); // une colonne de date de creation et de mise a jour automatique
         });
     }
 
