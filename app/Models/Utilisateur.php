@@ -15,5 +15,6 @@ class Utilisateur extends Model
     public function tache(){
         return $this->hasMany(Tache::class);
     }
+    protected $fillable=['nom','email','password'];
     use HasFactory;
 }

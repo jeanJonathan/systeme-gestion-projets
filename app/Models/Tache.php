@@ -17,5 +17,6 @@ class Tache extends Model
     public function projet(){
         return $this->belongsTo(Projet::class,'projet_id');
     }
+    protected $fillable =['nom','description','date_debut','date_fin'];
     use HasFactory;
 }
