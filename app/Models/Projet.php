@@ -26,5 +26,8 @@ class Projet extends Model
     la creation ou la mise a jour d'une instance de notre modele au lieu
     d'utiliser plustot des attributs separer)*/
 
+    /*Important: Laravel utilise le typage dynamique comme on a vu de meme en php
+    donc pas besoin de preciser le type des attribut apres cela
+    se fera dynamiquement lors de l'affectation*/
     use HasFactory;
 }
