@@ -95,5 +95,17 @@ class ControleurProjet extends Controller
         return redirect('/projets')->with('success', 'Projet mis à jour avec succès.');
     }
 
+    /**
+     * Supprime un projet existant de la base de données.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
+    {
+        $projet = Projet::findOrFail($id);
+        $projet->delete();
 
+        return redirect('/projets')->with('success', 'Projet supprimé avec succès.');
+    }
 }
