@@ -75,5 +75,25 @@ class ControleurProjet extends Controller
         return view('projets.edit', compact('projet'));
     }
 
+    /**
+     * Met à jour un projet existant dans la base de données.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, $id)
+    {
+        $validatedData = $request->validate([
+            'nom' => 'required|max:255',
+            'description' => 'required',
+        ]);
+
+        $projet = Projet::findOrFail($id);
+        $projet->update($validatedData);
+
+        return redirect('/projets')->with('success', 'Projet mis à jour avec succès.');
+    }
+
 
 }
