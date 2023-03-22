@@ -37,6 +37,19 @@ class ControleurProjet extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+    public function store(Request $request)
+    {
+        $validatedData = $request->validate([
+            'nom' => 'required|max:255',
+            'description' => 'required',
+        ]);
+
+        $projet = Projet::create($validatedData);
+
+        return redirect('/projets')->with('success', 'Projet enregistré avec succès.');
+    }
+
+
 
 
 }
