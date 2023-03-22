@@ -62,7 +62,18 @@ class ControleurProjet extends Controller
         return view('projets.show', compact('projet'));
     }
 
+    /**
+     * Affiche le formulaire de modification d'un projet existant.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit($id)
+    {
+        $projet = Projet::findOrFail($id);
 
+        return view('projets.edit', compact('projet'));
+    }
 
 
 }
