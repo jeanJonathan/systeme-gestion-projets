@@ -21,4 +21,22 @@ class ControleurProjet extends Controller
         return view('projets.index', compact('projets'));
     }
 
+    /**
+     * Affiche le formulaire de création d'un nouveau projet.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        return view('projets.create');
+    }
+
+    /**
+     * Enregistre un nouveau projet dans la base de données.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+
+
 }
