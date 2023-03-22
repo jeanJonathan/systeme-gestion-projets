@@ -49,6 +49,19 @@ class ControleurProjet extends Controller
         return redirect('/projets')->with('success', 'Projet enregistré avec succès.');
     }
 
+    /**
+     * Affiche les détails d'un projet.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        $projet = Projet::findOrFail($id);
+
+        return view('projets.show', compact('projet'));
+    }
+
 
 
 
