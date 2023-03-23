@@ -22,7 +22,7 @@ class ControleurProjet extends Controller
     }
 
     /**
-     * Affiche le formulaire de création d'un nouveau projet.
+     * Affiche le formulaire de création d'un nouveau projets.
      *
      * @return \Illuminate\Http\Response
      */
@@ -32,7 +32,7 @@ class ControleurProjet extends Controller
     }
 
     /**
-     * Enregistre un nouveau projet dans la base de données.
+     * Enregistre un nouveau projets dans la base de données.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
@@ -50,7 +50,7 @@ class ControleurProjet extends Controller
     }
 
     /**
-     * Affiche les détails d'un projet.
+     * Affiche les détails d'un projets.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
@@ -63,7 +63,7 @@ class ControleurProjet extends Controller
     }
 
     /**
-     * Affiche le formulaire de modification d'un projet existant.
+     * Affiche le formulaire de modification d'un projets existant.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
@@ -76,7 +76,7 @@ class ControleurProjet extends Controller
     }
 
     /**
-     * Met à jour un projet existant dans la base de données.
+     * Met à jour un projets existant dans la base de données.
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
@@ -96,7 +96,7 @@ class ControleurProjet extends Controller
     }
 
     /**
-     * Supprime un projet existant de la base de données.
+     * Supprime un projets existant de la base de données.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response

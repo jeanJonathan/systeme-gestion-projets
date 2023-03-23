@@ -12,7 +12,7 @@ class Projet extends Model
     /*Definition des fonctions Eloquent pour la relation
     'un a plusieur entre Projet et Tache*/
     public function taches(){
-        //la methode hasMany() pour dire que chaque projet a plusieurs taches associes
+        //la methode hasMany() pour dire que chaque projets a plusieurs taches associes
         return $this->hasMany(Tache::class);
         /*Des lors sur une instance de Projet on peut reccuperer
         les taches associes aux projets*/
