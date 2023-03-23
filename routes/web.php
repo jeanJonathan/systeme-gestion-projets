@@ -16,3 +16,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+//Route pour acceder a la methode index qui affiche la liste des projets de ControleurProjet
+Route::get('/projets', 'ControleurProjet@index');

@@ -16,8 +16,9 @@ class ControleurProjet extends Controller
      */
     public function index()
     {
+        //Reccuperation de tout les projets
         $projets = Projet::all();
-
+        //Transmission de tout les projets a la vue pour les afficher
         return view('projets.index', compact('projets'));
     }
 
