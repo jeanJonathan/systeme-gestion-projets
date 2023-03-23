@@ -39,6 +39,16 @@ class ControleurProjet extends Controller
      */
     public function store(Request $request)
     {
+        $projet = new Projet;
+        $projet->nom = $request->input('projet jj');
+        $projet->description = $request->input('il s agit du projet Laravel de jj');
+        $projet->date_debut = $request->input('2022-01-01');
+        $projet->date_fin = $request->input('2023-12-01');
+        $projet->save();
+
+        return redirect()->route('projets.index')->with('success', 'Le projet a été créé avec succès.');
+
+        /*
         $validatedData = $request->validate([
             'nom' => 'required|max:255',
             'description' => 'required',
@@ -47,6 +57,7 @@ class ControleurProjet extends Controller
         $projet = Projet::create($validatedData);
 
         return redirect('/projets')->with('success', 'Projet enregistré avec succès.');
+        */
     }
 
     /**
