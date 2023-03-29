@@ -17,4 +17,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 //Route pour acceder a la methode index qui affiche la liste des projets de ControleurProjet
-Route::get('/projets', 'ControleurProjet@index');
+//Route::get('/projets', 'ControleurProjet@index');
+
+//Route::get('/projets', 'App\Http\Controllers\ControleurProjet@index')->name('projets.index');
+Route::resource('/projets', 'App\Http\Controllers\ControleurProjet');
+

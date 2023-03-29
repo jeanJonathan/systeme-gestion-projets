@@ -6,6 +6,8 @@ namespace App\Http\Controllers;
 //table des projets dans la base de donnees
 use App\Models\Projet;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+
 
 class ControleurProjet extends Controller
 {
@@ -41,10 +43,10 @@ class ControleurProjet extends Controller
     public function store(Request $request)
     {
         $projet = new Projet;
-        $projet->nom = $request->input('projet jj');
-        $projet->description = $request->input('il s agit du projet Laravel de jj');
-        $projet->date_debut = $request->input('2022-01-01');
-        $projet->date_fin = $request->input('2023-12-01');
+        $projet->nom = $request->input('projet');
+        $projet->description = $request->input('description');
+        $projet->date_debut = $request->input('date_debut');
+        $projet->date_fin = $request->input('date_fin');
         $projet->save();
 
         return redirect()->route('projets.index')->with('success', 'Le projet a été créé avec succès.');

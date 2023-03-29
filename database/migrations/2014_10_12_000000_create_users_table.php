@@ -21,6 +21,9 @@ return new class extends Migration
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
+            //On definis une longueur recommander pour une colonne d'index unique ici email
+            $table->string('email', 191)->unique();
+
         });
     }
 
